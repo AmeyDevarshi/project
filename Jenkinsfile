@@ -29,9 +29,7 @@ pipeline {
         
         stage ('Email Notification'){
             steps {
-                mail bcc: '', body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
-
-                Check console output at $BUILD_URL to view the results.''', cc: '', from: '', replyTo: '', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'ameydevarshi1@gmail.com'  
+                mail bcc: '', body: 'The jenkins build for CI was successful', cc: '', from: '', replyTo: '', subject: 'Jenkins Build Successful', to: 'ameydevarshi1@gmail.com'
             }
            
             
